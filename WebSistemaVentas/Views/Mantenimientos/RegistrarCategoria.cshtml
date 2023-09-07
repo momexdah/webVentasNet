@@ -1,0 +1,31 @@
+﻿@section Styles
+{
+}
+
+@section Scripts{
+    <script src="~/js/mantenimientos/registrar-categoria.js"></script>
+}
+
+
+<form id="formcrud" class="mb-9">
+    <div class="mb-3">
+        <label for="txtcodigo" class="form-label">CODIGO</label>
+        <input type="text" class="form-control" id="txtcodigo" disabled>
+    </div>
+    <div class="mb-3">
+        <label for="txtnombreCategoria" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="txtnombreCategoria" onchange="this.value=this.value.toUpperCase()" onblur="this.value=this.value.toUpperCase()" placeholder="Ejemplo: Lacteos">
+    </div>
+
+    <div class="mb-3">
+        <label for="txtDescripcion" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" id="txtDescripcion" onchange="this.value = this.value.toUpperCase()" onblur="this.value=this.value.toUpperCase()">
+    </div>
+    <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchestado" checked>
+        <label class="form-check-label" for="switchestado">Estado Activo</label>
+    </div>
+
+    <button id="btnguardar" type="button" class="btn btn-primary btn-sm me-2">Guardar</button>
+    <a type="button" class="btn btn-danger btn-sm" asp-controller="Mantenimientos" asp-action="ListarCategorias">Cancelar</a>
+</form>

@@ -1,0 +1,64 @@
+﻿@model WebSistemaVentas.Models.Configuraciones.Usuarios.Get1_Usuarios
+
+@section Scripts
+{
+    <script src="~/js/configuraciones/registrar-perfil.js"></script>
+    <script src="~/js/util.js"></script>
+    <script src="~/js/core.js"></script>
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/configuraciones/registrar-perfil.css">
+}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="formBox">
+            <form id="formcrud">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>Registrar Perfil</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="inputBox ">
+                            <div class="inputText">ID</div>
+                            <input type="text" name="txtid" id="txtid" class="input" disabled>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="inputBox ">
+                            <div class="inputText">Perfil</div>
+                            <input type="text" name="txtNombrePerfil" id="txtNombrePerfil" class="input" onchange="this.value = this.value.toUpperCase()" onblur="this.value = this.value.toUpperCase()">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="inputBox">
+                            <div class="inputText">Descripción</div>
+                            <textarea class="input" name="txtDescripcion" id="txtDescripcion" onchange="this.value = this.value.toUpperCase()" onblur="this.value = this.value.toUpperCase()"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" role="switch" id="switchestado" checked>
+                        <label class="form-check-label" for="switchestado">Estado Activo</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button type="button" id="btnGuardar" class="button">Guardar</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" class="button button-danger">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

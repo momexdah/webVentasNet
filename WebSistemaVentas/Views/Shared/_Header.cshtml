@@ -1,0 +1,92 @@
+﻿<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebSistemaVentas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    @* <li class="nav-item"> *@
+                    @*     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a> *@
+                    @* </li> *@
+                    @* <li class="nav-item"> *@
+                    @*     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
+                    @* </li> *@
+
+                    <div class="btn-group">
+                        <button class="btn dropdown-toggle" type="button" id="mantenimientos-dd" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                            <span class="fa fa-list"></span> Mantenimientos
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="mantenimientos-dd">
+                            <li>
+                                <div class="btn-group dropend w-100">
+                                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" onclick="event.stopPropagation();">
+                                        Categorías
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="Mantenimientos" asp-action="RegistrarCategoria">Registrar</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="Mantenimientos" asp-action="ListarCategorias">Listar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-center" href="#">Menu item</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-center" href="#">Menu item</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn dropdown-toggle" type="button" id="mantenimientos-dd" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                            <span class="fa fa-gears"></span> Configuraciones
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="mantenimientos-dd">
+                            <li>
+                                <div class="btn-group dropend w-100">
+                                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" onclick="event.stopPropagation();">
+                                        Perfiles
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="Configuraciones" asp-action="RegistrarPerfil">Registrar</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="Configuraciones" asp-action="">Listar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-center" href="#">Menu item</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-center" href="#">Menu item</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
